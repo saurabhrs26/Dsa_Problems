@@ -1,0 +1,10 @@
+  Program          Status
+1.Prime No         Done
+2.Reverse String   Done
+3.Swap Number      Done
+4.Factorial        Done
+5.Palindrome No    Done 
+6.Palindrome str   Done
+7.Armstrong        
+8.Perfect Square
+9.Happy Number 
