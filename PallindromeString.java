@@ -27,5 +27,6 @@ public class PallindromeString {
        else{
         System.out.println("Given string "+original+" and "+rev+" are different");
        }
+       s.close();
     }
 }

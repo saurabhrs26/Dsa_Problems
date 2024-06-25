@@ -1,48 +1,44 @@
-package Arrays.Task;
+import java.util.Arrays;
 
-import java.util.Scanner;
-
-public class fascinatingNo {
+public class FascinatingNo {
     public static void main(String[] args) {
-        System.out.println("enter the number:");
-        Scanner sc=new Scanner(System.in);
-        int num=sc.nextInt();
-        //lets assume no is already in three digit
-        int temp=num;
-        int prod1=temp*2;
-        int prod2=temp*3;
-        System.out.println("original no:"+num+" multiply by 2:"+prod1+" multiply by 3:"+prod2);
-        String fullNo=num+""+prod1+prod2;
-        System.out.println("Complete no:"+fullNo);
-        int i,count=0;
-        for(char c='1';c<='9';c++)
-        {
-             boolean found=false;
-          for(i=0;i<fullNo.length();i++)
-          {
-           
-             if(fullNo.charAt(i)==c)
-             {
-               found=true;
-                break;
-             }
-            //  
-          }
-          if(!found){
-                
-                count++;
-                break;
-             }
-          
-        }
-        if(count>0)
-          {
-            System.out.println("is not fasc no");
-          }
-          else{
-            System.out.println(num+" is Fascinating number");
-          }
+        // long n=192;
+        // long num1=n*2;
+        // long num2=n*3;
+        
+        // String ans=n+""+num1+num2;
+        // boolean isFasc=false;
+        // for(int i=0;i<ans.length();i++)
+        // {
+        //     if(ans.charAt(i)=='1' || ans.charAt(i)=='2' || ans.charAt(i)=='3'
+        //     || ans.charAt(i)=='5'|| ans.charAt(i)=='4'|| ans.charAt(i)=='6'|| ans.charAt(i)=='7'
+        //     || ans.charAt(i)=='8'|| ans.charAt(i)=='9')
+        //     {
+        //         isFasc=true;
+        //     }
+            
+        // }
+        
+        // System.out.println(ans);
 
-        sc.close();
+        int num=192;
+        int num1=num*2;
+        int num2=num*3;
+        String result=num+""+num1+num2;
+        char[] ch=result.toCharArray();
+        Arrays.sort(ch);
+        for(int i=0;i<ch.length;i++){
+            System.out.println(ch[i]);
+        }
+        String res=new String(ch);
+        System.out.println(res);
+        if(res.equals("123456789"))
+        {
+            System.out.println("Fascinating..");
+        }
+        else
+        {
+            System.out.println("No fascinating");
+        }
     }
 }
